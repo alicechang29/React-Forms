@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import logo from './logo.svg'
+import logo from './logo.svg';
 import './App.css';
+import Box from './Box';
 
 
 /** Component for entire page.
@@ -19,20 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <main>
-        <img src={logo} className="App-logo" alt="Rithm" />
-        <h1>Rithm React Starter</h1>
-        <p>
-          <button
-              className="btn btn-primary"
-              onClick={incrCount}>
-            Clicked: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>src/App.jsx</code>
-        </p>
-      </main>
+      <Box backgroundColor="red" width="100px" height="50px" />
     </div>
   );
 };
