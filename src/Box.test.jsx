@@ -7,12 +7,17 @@ test("renders without crashing", function () {
 });
 
 test("has attributes", function () {
-  const { container } = render(
+  const { container, debug } = render(
     <Box
       backgroundColor="red"
-      width="50px"
-      height="100px" />);
+      width={50}
+      height={100} />);
+  debug(container);
 
-  expect(container.attributes).toContain([backgroundColor, width, height]);
+  //TODO: what does toHaveStyle do?
+  //expect(container).toHaveStyle("background-color: rgba(0, 0, 0, 0)");
+  expect(container.querySelector("div")
+    .getAttribute("style"))
+    .toBe("background-color: red; width: 50px; height: 100px");
 
 });

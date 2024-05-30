@@ -1,11 +1,21 @@
 // import { useState } from "react";
 // import { v4 as uuid } from 'uuid';
 
-function Box({ backgroundColor, width, height }) {
-  // width and height are passed as numbers
-  //need to convert into string and add "px"
+/** Box
+ *
+ * Props:
+ * backgroundColor: valid color in css
+ * width: number
+ * height: number
+ * unit: string -> default is "px"
+ */
+function Box({ backgroundColor, width, height, unit = "px" }) {
 
-  const style = { backgroundColor, width, height };
+  const style = {
+    backgroundColor,
+    width: `${width}${unit}`,
+    height: `${height}${unit}`
+  };
   return (
     <div style={style}>
     </div>

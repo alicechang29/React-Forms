@@ -5,30 +5,9 @@ exports[`matches snapshot 1`] = `
   <div
     class="App"
   >
-    <main>
-      <img
-        alt="Rithm"
-        class="App-logo"
-        src="/src/logo.svg"
-      />
-      <h1>
-        Rithm React Starter
-      </h1>
-      <p>
-        <button
-          class="btn btn-primary"
-        >
-          Clicked: 
-          0
-        </button>
-      </p>
-      <p>
-        Edit 
-        <code>
-          src/App.jsx
-        </code>
-      </p>
-    </main>
+    <div
+      style="background-color: red; width: 5em; height: 2em;"
+    />
   </div>
 </div>
 `;
